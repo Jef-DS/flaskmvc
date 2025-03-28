@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Klantenlijst{% endblock %}
+
+{% block content%}
+    <h1>De klanten</h1>
+    {% if klanten|length > 0 %}
+        <table>
+            <thead>
+                <tr><th>nr</th><th>naam</th></tr>
+            </thead>
+            <tbody>
+                {% for klant in klanten %}
+                   <tr><td>{{klant.nr}}</td><td>{{klant.naam}}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Er zijn nog geen klanten.</p>
+    {% endif %}
+    <a href="{{ url_for('nieuwe_klant') }}">Voeg klant toe.</a>
+{% endblock %}

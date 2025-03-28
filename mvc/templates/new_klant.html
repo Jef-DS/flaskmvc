@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Nieuwe klant {% endblock %}
+{% block content %}
+<form action="" method="post">
+    <label for="id">Nr: <input type="number" name="nr" id="nr" value="{{ nr }}"></label>
+    <label for="naam">Naam: <input type="text" name="naam" id="naam" value="{{ naam }}"></label>
+    <input type="submit" value="Toevoegen">
+</form>
+{{ error }}
+{% endblock %}
