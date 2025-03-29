@@ -7,7 +7,7 @@ class ProductionConfig(Config):
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    DATABASE_URI = 'mvc/data.db'
+    DATABASE_URI = 'flaskvb/data.db'
 
 class TestingConfig(Config):
     TESTING = True
